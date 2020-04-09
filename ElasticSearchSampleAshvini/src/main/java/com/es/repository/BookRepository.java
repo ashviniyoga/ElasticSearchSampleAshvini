@@ -10,7 +10,7 @@ import com.es.model.Book;
 
 public interface BookRepository extends ElasticsearchRepository<Book, String> {
 
-    Page<Book> findByAuthor(String author, Pageable pageable);
+    List<Book> findByAuthor(String author);
 
     List<Book> findByTitle(String title);
 

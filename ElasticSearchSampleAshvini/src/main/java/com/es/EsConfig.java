@@ -16,11 +16,15 @@ public class EsConfig {
 	
 	@Bean
 	public NodeBuilder nodebuilder() {
+		System.out.println("***************NodeBUilder **********");
 		return new NodeBuilder();
 	}
 	
 	@Bean
 	public ElasticsearchOperations ElasticsearchTemplate() throws IOException{
+		System.out.println("Elastic Template");
 		return new ElasticsearchTemplate(nodebuilder().local(true).node().client());				
 	}
+	
+		
 }

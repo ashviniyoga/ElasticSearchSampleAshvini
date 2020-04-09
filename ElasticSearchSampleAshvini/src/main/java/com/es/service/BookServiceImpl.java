@@ -3,8 +3,6 @@ package com.es.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.es.model.Book;
@@ -37,8 +35,8 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAll();
     }
 
-    public Page<Book> findByAuthor(String author, PageRequest pageRequest) {
-        return bookRepository.findByAuthor(author, pageRequest);
+    public List<Book> findByAuthor(String author) {
+        return bookRepository.findByAuthor(author);
     }
 
     public List<Book> findByTitle(String title) {

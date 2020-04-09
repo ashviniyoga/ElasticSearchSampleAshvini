@@ -18,7 +18,7 @@ public interface BookService {
 
     Iterable<Book> findAll();
 
-    Page<Book> findByAuthor(String author, PageRequest pageRequest);
+    List<Book> findByAuthor(String author);
 
     List<Book> findByTitle(String title);
 
