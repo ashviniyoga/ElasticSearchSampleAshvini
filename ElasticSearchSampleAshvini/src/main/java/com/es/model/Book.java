@@ -1,4 +1,4 @@
-package com.es.ElasticSearchSB.model;
+package com.es.model;
 
 
 import org.springframework.data.annotation.Id;
