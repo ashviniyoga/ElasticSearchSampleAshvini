@@ -4,7 +4,9 @@ package com.es.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "elasticsearch", type = "books")
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Document(indexName = "elasticsearch", type = "books",shards=2)
 public class Book {
 
     @Id
@@ -24,7 +26,7 @@ public class Book {
     }
 
     
-
+    @JsonIgnore
     public String getId() {
 		return id;
 	}

@@ -3,9 +3,6 @@ package com.es.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-
 import com.es.model.Book;
 
 public interface BookService {

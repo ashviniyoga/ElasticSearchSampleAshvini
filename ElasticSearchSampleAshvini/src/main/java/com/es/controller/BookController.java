@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.es.model.Book;
 import com.es.service.BookService;
+import com.es.service.BookServiceImpl;
 
 @RestController
 public class BookController {
 
 	@Autowired
-	private BookService bookservice;
+	private BookServiceImpl bookservice;
 	
 	@PostMapping("/save")
-	public Book save(Book book) {
-		return bookservice.save(book);	
+	public void save(Book book) {
+		bookservice.save(book);	
 	}
 	
 	@GetMapping("/findall")
